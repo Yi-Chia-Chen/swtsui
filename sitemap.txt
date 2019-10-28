@@ -1,4 +1,3 @@
-﻿https://ycc.vision/
-https://ycc.vision/About/
-https://ycc.vision/Publications/
-https://ycc.vision/CV/
+﻿https://yi-chia-chen.github.io/swtsui/
+https://yi-chia-chen.github.io/swtsui/research/
+https://yi-chia-chen.github.io/swtsui/publication/

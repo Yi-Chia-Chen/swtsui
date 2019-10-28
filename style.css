@@ -1,1174 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+*:before,
+*:after {
+ box-sizing: border-box;
+}
 ::-moz-selection{
     background: #FF4F4F;
-    color: #FFF;
+    color: white;
 }
 ::selection {
     background: #FF4F4F;
-    color: #FFF;
+    color: white;
 }
+a:link{ /* unvisited link */
+	color: white;
+	text-decoration: none;
+}
+a:visited { /* visited link */
+	color: white;
+	text-decoration: none;
+}
+a:hover { /* mouse over link */
+	color: #FF4F4F;
+	text-decoration: none;
+}
+a:active { /* selected link */
+	color: white;
+	text-decoration: none;
+}
+html,
 body {
-	background: #161616;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
-	font: 14px "Century Gothic", Helvetica, sans-serif;
-}
-
-div.wholePage{
-	padding: 0px auto 0px auto;
-	width: 650px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    width: 640px;
+    height: 100%;
+    background: #161616;
+    color: white;
+    font-weight: 100;
 	margin: 0px auto 0px auto;
+    padding: 0;
+    font-family: 'Roboto', Sans-serif;
+    font-size: 18px;
+    line-height: 30px;
 }
-
-/*-------Header Area-------*/
-
-/*----------------------------------------index page----------------------------------------*/
-div.headerIndex{
+.main{
+    display: block;
+    position: relative;
+}
+.header{
 	position: relative;
-	width: 650px;
-	height: 580px;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
+	width: 100%;
+	height: 250px;
 }
-div.nameAreaIndex{
+.header .title{
 	position: relative;
-	width: 650px;
-	height: 110px;
-	padding: 0px 0px 0px 0px;
-	margin: 10px 0px 0px 0px;
+	width: 100%;
+    height: 100%;
+    padding: 50px 0 0 0;
+    line-height: 200px;
+    font-size: 40px;
+    text-align: center;
 }
-div.photo{
-	position: absolute;
-	top: 110px;
-	left: 226px;
-  width: 197px;
-  height: 271px;
-  background: url("Files/Images/Yi-Chia.png") no-repeat center;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
+.navbar{
+    position: relative;
+    width: 100%;
+    height: 70px;
 }
-div.buttonsIndex{
-	position: absolute;
-	top: 406px;
-	width: 650px;
-	height: 182px;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
+.button{
+    position: relative;
+    float: left;
+    display: block;
+    width: 25%;
+    height: 100%;
+    text-align: center;
 }
-div.dateIndex{
-  	position: absolute;
-	top: 396px;
-	width: 650px;
-	margin: 0px 0px 0px 0px;
-	font-family: "Copperplate Gothic", "Tahoma", Helvetica, sans-serif;
-	font-size: 16px;
-	text-align: center;
-	color: white;
-}
-
-
-/*----------------------------------------Cyan Page----------------------------------------*/
-div.headerCyan{
-	position: relative;
-	width: 650px;
-	height: 230px;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
-}
-#nameCyan{
-	position: absolute;
-	top: 58px;
-	font-family: "DFKai-sb", "Calibri", Geneva, Sans-serif;
-	color: white;
-	text-align: center;
-	font-size: 50px;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
-}
-div.buttonCyan{
-	position: absolute;
-	top: 130px;
-	width: 650px;
-	height: 110px;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
-}
-div.cityArea{
-	position: absolute;
-	top: 0px;
-	left: 405px;
-	width: 110px;
-	height: 115px;
-	cursor: pointer;
-}
-#cityBut{
-	position: absolute;
-	top: 0px;
-	left: 405px;
-	width: 110px;
-	height: 115px;
-	cursor: pointer;
-	background: url('Files/Images/cityBut.png') no-repeat;
-}
-#cityHover{
-	position: absolute;
-	top: 0px;
-	left: 405px;
-	width: 110px;
-	height: 115px;
-	cursor: pointer;
-	background: url('Files/Images/cityHover.png') no-repeat;
-	display: none;
-}
-p.cyan{
-	font-family: "DFKai-sb", "Calibri", Geneva, Sans-serif;
-	text-align: justify;
-	font-size: 17px;
-	line-height: 25px;
-	color: white;
-}
-a.cyan{
-	font-family: "DFKai-sb", "Calibri", Geneva, Sans-serif;
-	font-size: 16px;
-	line-height: 25px;
-	color: white;
-	text-decoration: none;
-	border-bottom: none;
-}
-a.cyan:hover { /* mouse over link */
-	color: #FF4F4F;
-	text-decoration: none;
-}
-a.cyan:visited { /* visited link */
-	color: white;
-	text-decoration: none;
-}
-a.cyan:active { /* selected link */
-	color: white;
-	text-decoration: none;
-}
-p.cyanT{
-	width: 580px;
-	margin: 0 0 60px 10px;
-	padding: 0 0 0 0;
-	font-family: "DFKai-sb", "Calibri", Geneva, Sans-serif;
-	text-align: right;
-	font-size: 17px;
-	line-height: 25px;
-	color: white;
-	font-weight: 600;
-}
-p.cyanB{
-	width: 590px;
-	font-family: "DFKai-sb", "Calibri", Geneva, Sans-serif;
-	text-align: center;
-	font-size: 17px;
-	line-height: 25px;
-	color: white;
-}
-
-
-/*----------------------------------------others----------------------------------------*/
-div.header{
-	position: relative;
-	width: 650px;
-	height: 322px;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
-}
-div.nameArea{
-	position: relative;
-	width: 650px;
-	height: 120px;
-	padding: 0px 0px 0px 0px;
-	margin: 10px 0px 0px 0px;
-}
-#nameAt{
-	position: absolute;
-	top: 20px;
-	width: 650px;
-	height: 80px;
-	font-family: "Copperplate Gothic", "Tahoma", Helvetica, sans-serif;
-	color: white;
-	text-align: center;
-	font-size: 70px;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
-}
-#name{
-	position: absolute;
-	top: 20px;
-	width: 650px;
-	height: 80px;
-	font-family: "Copperplate Gothic", "Tahoma", Helvetica, sans-serif;
-	color: white;
-	text-align: center;
-	font-size: 70px;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
-	cursor: pointer;
-}
-#name:hover{
+.button:hover{
 	color: #FF4F4F;
 	cursor: pointer;
-	-webkit-animation: nameHover 0.5s; /*Safari and Chrome:*/
-	animation: nameHover 0.5s;
+	-webkit-animation: hoverFading 0.5s; /*Safari and Chrome:*/
+	animation: hoverFading 0.5s;
 }
-@keyframes nameHover
-{
+.navbar .button{
+    line-height: 70px;
+    font-size: 20px;
+}
+@keyframes hoverFading{
 	0% {color: white;}
 }
-@-webkit-keyframes nameHover
-{
+@-webkit-keyframes hoverFading{
 	0% {color: white;}
 }
-div.buttons{
-	position: absolute;
-	top: 130px;
-	width: 650px;
-	height: 182px;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
-}
-div.date{
-  	position: absolute;
-	top: 120px;
-	width: 650px;
-	margin: 0px 0px 0px 0px;
-	font-family: "Copperplate Gothic", "Tahoma", Helvetica, sans-serif;
-	font-size: 16px;
-	text-align: center;
+.navbar .active:hover{
 	color: white;
+	cursor: default;
 }
-div.aboutArea{
-	position: absolute;
-	top: 0px;
-	left: 135px;
-	width: 110px;
-	height: 115px;
-	cursor: pointer;
+.content{
+    position: relative;
+    width: 100%;
 }
-#aboutBut{
-	position: absolute;
-	top: 0px;
-	left: 135px;
-	width: 110px;
-	height: 115px;
-	cursor: pointer;
-	background: url('Files/Images/aboutBut.png') no-repeat;
+.content .textbox{
+    position: relative;
+    width: 90%;
+    margin: 0 5%;
 }
-#aboutHover{
-	position: absolute;
-	top: 0px;
-	left: 135px;
-	width: 110px;
-	height: 115px;
-	cursor: pointer;
-	background: url('Files/Images/aboutHover.png') no-repeat;
-	display: none;
+.content .nosepig{
+    position: relative;
+    width: 100%;
+    height: 404px;
+    margin: 0;
+    background: url("Files/Images/nosepig.jpg") no-repeat center;
 }
-#aboutAt{
-	position: absolute;
-	top: 0px;
-	left: 135px;
-	width: 110px;
-	height: 115px;
-	background: url('Files/Images/aboutAt.png') no-repeat;
-}
-div.publicationsArea{
-	position: absolute;
-	top: 45px;
-	left: 245px;
-	width: 160px;
-	height: 115px;
-	cursor: pointer;
-}
-#publicationsBut{
-	position: absolute;
-	top: 45px;
-	left: 245px;
-	width: 160px;
-	height: 115px;
-	cursor: pointer;
-	background: url('Files/Images/publicationsBut.png') no-repeat;
-}
-#publicationsHover{
-	position: absolute;
-	top: 45px;
-	left: 245px;
-	width: 160px;
-	height: 115px;
-	cursor: pointer;
-	background: url('Files/Images/publicationsHover.png') no-repeat;
-	display: none;
-}
-#publicationsAt{
-	position: absolute;
-	top: 45px;
-	left: 245px;
-	width: 160px;
-	height: 115px;
-	background: url('Files/Images/publicationsAt.png') no-repeat;
-}
-div.cvArea{
-	position: absolute;
-	top: 0px;
-	left: 405px;
-	width: 110px;
-	height: 115px;
-	cursor: pointer;
-}
-#cvBut{
-	position: absolute;
-	top: 0px;
-	left: 405px;
-	width: 110px;
-	height: 115px;
-	cursor: pointer;
-	background: url('Files/Images/cvBut.png') no-repeat;
-}
-#cvHover{
-	position: absolute;
-	top: 0px;
-	left: 405px;
-	width: 110px;
-	height: 115px;
-	cursor: pointer;
-	background: url('Files/Images/cvHover.png') no-repeat;
-	display: none;
-}
-#cvAt{
-	position: absolute;
-	top: 0px;
-	left: 405px;
-	width: 110px;
-	height: 115px;
-	background: url('Files/Images/cvAt.png') no-repeat;
-}
-#leftTri{
-	position: absolute;
-	top: 62px;
-	left: 95px;
-	width: 34px;
-	height: 30px;
-	background: url('Files/Images/triangle.png') no-repeat;
-}
-#rightTri{
-	position: absolute;
-	top: 62px;
-	left: 521px;
-	width: 34px;
-	height: 30px;
-	background: url('Files/Images/triangle.png') no-repeat;
-}
-div.aboutAreaN{
-	display: none;
-}
-#aboutButN{
-	display: none;
-}
-#aboutHoverN{
-	display: none;
-}
-#aboutAtN{
-	display: none;
-}
-div.publicationsAreaN{
-	display: none;
-}
-#publicationsButN{
-	display: none;
-}
-#publicationsHoverN{
-	display: none;
-}
-#publicationsAtN{
-	display: none;
-}
-div.cvAreaN{
-	display: none;
-}
-#cvButN{
-	display: none;
-}
-#cvHoverN{
-	display: none;
-}
-#cvAtN{
-	display: none;
-}
-
-/*-------Content Area-------*/
-div.contentBox{
-	width: 650px;
-	height: auto;
-	margin: 0px 0px 0px 0px;
-}
-
-/*Content Area*/
-div.content{
-	width: 590px;
-	padding: 20px 30px 20px 30px;
-}
-
-p.normal{
-	font-family: "Century Gothic", "Calibri", Geneva, Sans-serif;
-	text-align: left;
-	font-size: 16px;
-	line-height: 25px;
-	color: white;
-}
-a.normal:link{ /* unvisited link */
-	color: white;
-	text-decoration: underline;
-}
-a.normal:visited { /* visited link */
-	color: white;
-	text-decoration: underline;
-}
-a.normal:hover { /* mouse over link */
-	color: #FF4F4F;
-	text-decoration: underline;
-}
-a.normal:active { /* selected link */
-	color: white;
-	text-decoration: underline;
-}
-
-#toTopButAreaFixed{
-	position: fixed;
-	bottom: 0;
-	width: 650px;
-	height: 20px;
-	background: transparent;
-	display:none;
-}
-#toTopButFixed{
-	margin: 0 auto 0 auto;
-	width: 0;
-	height: 0;
-	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
-	border-bottom: 20px solid white;
-	cursor: pointer;
-	display: none;
-}
-div.toTopButArea{
-	width: 650px;
-	height: 20px;
-	background: #161616;
-}
-div.toTopBut{
-	margin: 0 auto 0 auto;
-	width: 0;
-	height: 0;
-	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
-	border-bottom: 20px solid white;
-	cursor: pointer;
-}
-div.endBar{
-	width: 650px;
-	height: 30px;
-}
-
-/*Publications*/
-p.sectionTitle{
-	padding: 30px 0px 17px 0px;
-	font-family: "Century Gothic", Sans-serif;
-	font-size: 20px;
+.content .section-title{
+	padding: 30px 0 15px 0;
+    font-size: 20px;
 	font-weight: 600;
-	margin: 0px 0px 0px 0px;
-	color: white;
 }
-p.publications{
-	padding: 0px 0px 12px 40px;
-	font-family: "Century Gothic", Sans-serif;
-	font-size: 16px;
-	line-height: 26px;
+.content .publications{
+	padding: 0 0 0 40px;
 	text-indent: -40px;
-	margin: 0px 0px 0px 0px;
-	color: white;
 }
-span.pubLink{
-	text-decoration: underline;
+.footer{
+    position: relative;
+    margin: auto auto 0 auto;
+    width: 100%;
+    height: 90px;
 }
-a.publications:link{ /* unvisited link */
-	color: white;
-	text-decoration: none;
-}
-a.publications:visited { /* visited link */
-	color: white;
-	text-decoration: none;
-}
-a.publications:hover { /* mouse over link */
-	color: #FF4F4F;
-	text-decoration: none;
-}
-a.publications:hover span.pubLink{ /* mouse over link */
-	color: #FF4F4F;
-}
-a.publications:active { /* selected link */
-	color: white;
-	text-decoration: none;
-}
-p.publicationsConf
-{
-	padding: 0px 0px 10px 40px;
-	font-family: "Century Gothic", Sans-serif;
-	font-size: 15px;
-	text-indent : -40px;
-	margin: 0px 0px 0px 0px;
-	color: white;
-}
-
-p.education{
-	padding: 0px 0px 12px 0px;
-	font-family: "Century Gothic", Sans-serif;
-	font-size: 16px;
-	line-height: 26px;
-	margin: 0px 0px 0px 0px;
-	color: white;
-}
-span.year{
-	padding: 0px 0px 0px 0px;
-	text-indent: 0px;
-	display: inline-block;
-	width: 100px;
-}
-span.degree{
-	padding: 0px 0px 0px 0px;
-	text-indent: 0px;
-	display: inline-block;
-	width: 70px;
-}
-span.school{
-	padding: 0px 0px 0px 0px;
-	text-indent: 0px;
-	display: inline-block;
-	width: 250px;
-}
-span.appointments{
-	padding: 0px 0px 0px 0px;
-	text-indent: 0px;
-	display: inline-block;
-	width: 320px;
-}
-p.honors{
-	padding: 0px 0px 12px 0px;
-	font-family: "Century Gothic", Sans-serif;
-	font-size: 15px;
-	line-height: 26px;
-	margin: 0px 0px 0px 0px;
-	color: white;
-}
-span.cvLink{
-	text-decoration: underline;
-}
-a.cvLink:link{ /* unvisited link */
-	float: right;
-	padding: 0px 0px 12px 0px;
-	font-family: "Century Gothic", Sans-serif;
-	font-size: 16px;
-	line-height: 26px;
-	margin: 0px 0px 0px 0px;
-	color: white;
-	text-decoration: none;
-}
-a.cvLink:visited { /* visited link */
-	color: white;
-	text-decoration: none;
-}
-a.cvLink:hover { /* mouse over link */
-	color: #FF4F4F;
-	text-decoration: none;
-}
-a.cvLink:hover span.cvLink{ /* mouse over link */
-	color: #FF4F4F;
-}
-a.cvLink:active { /* selected link */
-	color: white;
-	text-decoration: none;
-}
-
-/*-------Footer Area-------*/
-div.footer{
-	position: relative;
-	width: 650px;
-	height: 100px;
-	margin: 0px 0px 20px 0px;
-}
-div.mailtoArea{
-	position: absolute;
-	top: 20px;
-	left: 215px;
-	width: 60px;
-	height: 52px;
-	cursor: pointer;
-}
-#mailto{
-	position: absolute;
-	top: 20px;
-	left: 215px;
-	width: 60px;
-	height: 52px;
-	cursor: pointer;
-	background: url('Files/Images/mailto.png') no-repeat;
-}
-#mailtoHover{
-	position: absolute;
-	top: 20px;
-	left: 215px;
-	width: 60px;
-	height: 52px;
-	cursor: pointer;
-	background: url('Files/Images/mailtoHover.png') no-repeat;
-	display: none;
-}
-div.gsArea{
-	position: absolute;
-	top: 20px;
-	left: 295px;
-	width: 60px;
-	height: 52px;
-	cursor: pointer;
-}
-#gs{
-	position: absolute;
-	top: 20px;
-	left: 295px;
-	width: 60px;
-	height: 52px;
-	cursor: pointer;
-	background: url('Files/Images/gs.png') no-repeat;
-}
-#gsHover{
-	position: absolute;
-	top: 20px;
-	left: 295px;
-	width: 60px;
-	height: 52px;
-	cursor: pointer;
-	background: url('Files/Images/gsHover.png') no-repeat;
-	display: none;
-}
-div.rgArea{
-	position: absolute;
-	top: 20px;
-	left: 375px;
-	width: 60px;
-	height: 52px;
-	cursor: pointer;
-}
-#rg{
-	position: absolute;
-	top: 20px;
-	left: 375px;
-	width: 60px;
-	height: 52px;
-	cursor: pointer;
-	background: url('Files/Images/rg.png') no-repeat;
-}
-#rgHover{
-	position: absolute;
-	top: 20px;
-	left: 375px;
-	width: 60px;
-	height: 52px;
-	cursor: pointer;
-	background: url('Files/Images/rgHover.png') no-repeat;
-	display: none;
-}
-
-@media screen and (max-width: 650px) {
-	div.wholePage{
-		padding: 0px auto 0px auto;
-		width: 300px;
-		margin: 0px auto 0px auto;
-	}
-
-	/*----------------------------------------index page----------------------------------------*/
-	div.headerIndex{
-		position: relative;
-		width: 300px;
-		height: 580px;
-		padding: 0px 0px 0px 0px;
-		margin: 0px 0px 0px 0px;
-	}
-	div.nameAreaIndex{
-		position: relative;
-		width: 300px;
-		height: 110px;
-		padding: 0px 0px 0px 0px;
-		margin: 10px 0px 0px 0px;
-	}
-	div.photo{
-		position: absolute;
-		top: 110px;
-		left: 50px;
-		width: 197px;
-		height: 271px;
-		background: url("Files/Images/Yi-Chia.png") no-repeat center;
-		padding: 0px 0px 0px 0px;
-		margin: 0px 0px 0px 0px;
-	}
-	div.buttonsIndex{
-		position: absolute;
-		top: 406px;
-		width: 300px;
-		height: 182px;
-		padding: 0px 0px 0px 0px;
-		margin: 0px 0px 0px 0px;
-	}
-	div.dateIndex{
-		position: absolute;
-		top: 396px;
-		width: 300px;
-		margin: 0px 0px 0px 0px;
-		font-family: "Copperplate Gothic", "Tahoma", Helvetica, sans-serif;
-		font-size: 13px;
-		text-align: center;
-		color: white;
-	}
-
-	/*----------------------------------------Cyan Page----------------------------------------*/
-	div.headerCyan{
-		position: relative;
-		width: 300px;
-		height: 230px;
-		padding: 0px 0px 0px 0px;
-		margin: 0px 0px 0px 0px;
-	}
-	div.buttonCyan{
-		position: absolute;
-		top: 130px;
-		width: 300px;
-		height: 110px;
-		padding: 0px 0px 0px 0px;
-		margin: 0px 0px 0px 0px;
-	}
-	div.cityArea{
-		position: absolute;
-		top: 0px;
-		left: 185px;
-		width: 110px;
-		height: 115px;
-		cursor: pointer;
-	}
-	#cityBut{
-		position: absolute;
-		top: 0px;
-		left: 185px;
-		width: 110px;
-		height: 115px;
-		cursor: pointer;
-		background: url('Files/Images/cityBut.png') no-repeat;
-	}
-	#cityHover{
-		position: absolute;
-		top: 0px;
-		left: 185px;
-		width: 110px;
-		height: 115px;
-		cursor: pointer;
-		background: url('Files/Images/cityHover.png') no-repeat;
-		display: none;
-	}
-	p.cyanT{
-		width: 290px;
-		margin: 0 0 60px 10px;
-		padding: 0 0 0 0;
-		font-family: "DFKai-sb", "Calibri", Geneva, Sans-serif;
-		text-align: right;
-		font-size: 17px;
-		line-height: 25px;
-		color: white;
-		font-weight: 600;
-	}
-	p.cyanB{
-		width: 300px;
-		font-family: "DFKai-sb", "Calibri", Geneva, Sans-serif;
-		text-align: center;
-		font-size: 17px;
-		line-height: 25px;
-		color: white;
-	}
-
-	/*----------------------------------------others----------------------------------------*/
-	/*-------Header Area-------*/
-	div.header{
-		position: relative;
-		width: 300px;
-		height: 190px;
-		padding: 0px 0px 0px 0px;
-		margin: 0px 0px 0px 0px;
-	}
-	div.nameArea{
-		position: relative;
-		width: 300px;
-		height: 80px;
-		padding: 0px 0px 0px 0px;
-		margin: 10px 0px 0px 0px;
-	}
-	#nameAt{
-		position: absolute;
-		top: 20px;
-		width: 300px;
-		height: 45px;
-		font-family: "Copperplate Gothic", "Tahoma", Helvetica, sans-serif;
-		color: white;
-		text-align: center;
-		font-size: 40px;
-		padding: 0px 0px 0px 0px;
-		margin: 0px 0px 0px 0px;
-	}
-	#name{
-		position: absolute;
-		top: 20px;
-		width: 300px;
-		height: 45px;
-		font-family: "Copperplate Gothic", "Tahoma", Helvetica, sans-serif;
-		color: white;
-		text-align: center;
-		font-size: 40px;
-		padding: 0px 0px 0px 0px;
-		margin: 0px 0px 0px 0px;
-		cursor: pointer;
-	}
-	#name:hover{
-		color: #FF4F4F;
-		cursor: pointer;
-		-webkit-animation: nameHover 0.5s; /*Safari and Chrome:*/
-		animation: nameHover 0.5s;
-	}
-	@keyframes nameHover{
-		0% {color: white;}
-	}
-	@-webkit-keyframes nameHover{
-		0% {color: white;}
-	}
-	div.buttons{
-		position: absolute;
-		top: 90px;
-		width: 300px;
-		height: 110px;
-		padding: 0px 0px 0px 0px;
-		margin: 0px 0px 0px 0px;
-	}
-	div.date{
-		position: absolute;
-		top: 80px;
-		width: 300px;
-		margin: 0px auto 0px auto;
-		font-family: "Copperplate Gothic", "Tahoma", Helvetica, sans-serif;
-		font-size: 13px;
-		text-align: center;
-		color: white;
-	}
-	div.aboutAreaN{
-		position: absolute;
-		top: 0px;
-		left: 15px;
-		width: 90px;
-		height: 75px;
-		cursor: pointer;
-		display: inline;
-	}
-	#aboutButN{
-		position: absolute;
-		top: 0px;
-		left: 15px;
-		width: 90px;
-		height: 75px;
-		cursor: pointer;
-		background: url('Files/Images/aboutButN.png') no-repeat;
-		display: inline;
-	}
-	#aboutHoverN{
-		position: absolute;
-		top: 0px;
-		left: 15px;
-		width: 90px;
-		height: 75px;
-		cursor: pointer;
-		background: url('Files/Images/aboutHoverN.png') no-repeat;
-		display: none;
-	}
-	#aboutAtN{
-		position: absolute;
-		top: 0px;
-		left: 15px;
-		width: 90px;
-		height: 75px;
-		cursor: pointer;
-		background: url('Files/Images/aboutAtN.png') no-repeat;
-		display: inline;
-	}
-	div.publicationsAreaN{
-		position: absolute;
-		top: 35px;
-		left: 105px;
-		width: 90px;
-		height: 75px;
-		cursor: pointer;
-		display: inline;
-	}
-	#publicationsButN{
-		position: absolute;
-		top: 35px;
-		left: 105px;
-		width: 90px;
-		height: 75px;
-		cursor: pointer;
-		background: url('Files/Images/publicationsButN.png') no-repeat;
-		display: inline;
-	}
-	#publicationsHoverN{
-		position: absolute;
-		top: 35px;
-		left: 105px;
-		width: 90px;
-		height: 75px;
-		cursor: pointer;
-		background: url('Files/Images/publicationsHoverN.png') no-repeat;
-		display: none;
-	}
-	#publicationsAtN{
-		position: absolute;
-		top: 35px;
-		left: 105px;
-		width: 90px;
-		height: 75px;
-		cursor: pointer;
-		background: url('Files/Images/publicationsAtN.png') no-repeat;
-		display: inline;
-	}
-	div.cvAreaN{
-		position: absolute;
-		top: 0px;
-		left: 195px;
-		width: 90px;
-		height: 75px;
-		cursor: pointer;
-		display: inline;
-	}
-	#cvButN{
-		position: absolute;
-		top: 0px;
-		left: 195px;
-		width: 90px;
-		height: 75px;
-		background: url('Files/Images/cvButN.png') no-repeat;
-		display: inline;
-	}
-	#cvHoverN{
-		position: absolute;
-		top: 0px;
-		left: 195px;
-		width: 90px;
-		height: 75px;
-		background: url('Files/Images/cvHoverN.png') no-repeat;
-		display: none;
-	}
-	#cvAtN{
-		position: absolute;
-		top: 0px;
-		left: 195px;
-		width: 90px;
-		height: 75px;
-		background: url('Files/Images/cvAtN.png') no-repeat;
-		display: inline;
-	}
-	div.aboutArea{
-		display: none;
-	}
-	#aboutBut{
-		display: none;
-	}
-	#aboutHover{
-		display: none;
-	}
-	#aboutAt{
-		display: none;
-	}
-	div.publicationsArea{
-		display: none;
-	}
-	#publicationsBut{
-		display: none;
-	}
-	#publicationsHover{
-		display: none;
-	}
-	#publicationsAt{
-		display: none;
-	}
-	div.cvArea{
-		display: none;
-	}
-	#cvBut{
-		display: none;
-	}
-	#cvHover{
-		display: none;
-	}
-	#cvAt{
-		display: none;
-	}
-	#leftTri{
-		display: none;
-	}
-	#rightTri{
-		display: none;
-	}
-
-	/*-------Content Area-------*/
-	div.contentBox{
-		width: 300px;
-		height: auto;
-		margin: 0px 0px 0px 0px;
-	}
-
-	/*Content Area*/
-	div.content{
-		width: 300px;
-		padding: 20px 0px 80px 0px;
-	}
-	#toTopButAreaFixed{
-		position: fixed;
-		bottom: 0;
-		width: 300px;
-		height: 20px;
-		background: transparent;
-		display:none;
-	}
-	div.toTopButArea{
-		width: 300px;
-		height: 20px;
-	}
-	div.toTopBut{
-		margin: 0 auto 0 auto;
-		width: 0;
-		height: 0;
-		border-left: 20px solid transparent;
-		border-right: 20px solid transparent;
-		border-bottom: 20px solid white;
-		cursor: pointer;
-	}
-	div.endBar{
-		width: 300px;
-		height: 30px;
-	}
-  span.year{
-  	padding: 0px 0px 0px 0px;
-  	text-indent: 0px;
-  	display: block;
-  	width: 100px;
-  }
-  span.degree{
-  	padding: 0px 0px 0px 0px;
-  	text-indent: 0px;
-  	display: block;
-  	width: 70px;
-  }
-  span.school{
-  	padding: 0px 0px 0px 0px;
-  	text-indent: 0px;
-  	display: block;
-  	width: 250px;
-  }
-  span.appointments{
-  	padding: 0px 0px 0px 0px;
-  	text-indent: 0px;
-  	display: block;
-  	width: 320px;
-  }
-
-	/*-------Footer Area-------*/
-	div.footer{
-		position: relative;
-		width: 300px;
-		height: 100px;
-		margin: 0px 0px 20px 0px;
-	}
-	div.mailtoArea{
-		position: absolute;
-		top: 20px;
-		left: 50px;
-		width: 60px;
-		height: 52px;
-		cursor: pointer;
-	}
-	#mailto{
-		position: absolute;
-		top: 20px;
-		left: 50px;
-		width: 60px;
-		height: 52px;
-		cursor: pointer;
-		background: url('Files/Images/mailto.png') no-repeat;
-	}
-	#mailtoHover{
-		position: absolute;
-		top: 20px;
-		left: 50px;
-		width: 60px;
-		height: 52px;
-		cursor: pointer;
-		background: url('Files/Images/mailtoHover.png') no-repeat;
-		display: none;
-	}
-	div.gsArea{
-		position: absolute;
-		top: 20px;
-		left: 120px;
-		width: 60px;
-		height: 52px;
-		cursor: pointer;
-	}
-	#gs{
-		position: absolute;
-		top: 20px;
-		left: 120px;
-		width: 60px;
-		height: 52px;
-		cursor: pointer;
-		background: url('Files/Images/gs.png') no-repeat;
-	}
-	#gsHover{
-		position: absolute;
-		top: 20px;
-		left: 120px;
-		width: 60px;
-		height: 52px;
-		cursor: pointer;
-		background: url('Files/Images/gsHover.png') no-repeat;
-		display: none;
-	}
-	div.rgArea{
-		position: absolute;
-		top: 20px;
-		left: 190px;
-		width: 60px;
-		height: 52px;
-		cursor: pointer;
-	}
-	#rg{
-		position: absolute;
-		top: 20px;
-		left: 190px;
-		width: 60px;
-		height: 52px;
-		cursor: pointer;
-		background: url('Files/Images/rg.png') no-repeat;
-	}
-	#rgHover{
-		position: absolute;
-		top: 20px;
-		left: 190px;
-		width: 60px;
-		height: 52px;
-		cursor: pointer;
-		background: url('Files/Images/rgHover.png') no-repeat;
-		display: none;
-	}
+.footer .button{
+    padding: 30px 0 0 0;
+    line-height: 60px;
+    font-size: 18px;
 }
