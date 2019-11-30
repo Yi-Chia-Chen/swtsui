@@ -42,6 +42,9 @@ html{
     font-size: 18px;
     line-height: 30px;
 }
+body{
+    padding: 0 0 110px 0;
+}
 header{
 	position: relative;
 	width: 100%;
